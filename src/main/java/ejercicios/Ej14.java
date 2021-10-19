@@ -19,17 +19,22 @@ public class Ej14 {
         //lectura de datos por teclado mediante Scanner
         Scanner teclado = new Scanner(System.in);
         int tiempo = teclado.nextInt();
-        
+
+        //Declaramos e inicializamos constantes
+        final int HORAS = 3600;
+        final int MINUTOS = 60;
+
         //Para saber las horas
-        int horas = tiempo / 3600;
-        
+        int horas = tiempo / HORAS;
+
         //Con lo que sobra para saber los minutos
-        int minutos = (tiempo % 3600) / 60;
-        
+        int minutos = (tiempo % HORAS) / MINUTOS;
+
         //Lo que sobra del anterior para saber los segundos
-        int segundos = (tiempo % 3600) % 60;
-        
-        System.out.printf("El tiempo introducido son: " + horas + " horas, "
+        int segundos = (tiempo % HORAS) % MINUTOS;
+
+        System.out.printf("El tiempo introducido son: "
+                + horas + " horas, "
                 + minutos + " minutos y "
                 + segundos + " segundos.");
     }
